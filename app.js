@@ -1,24 +1,20 @@
-// creating vue app
 const app = Vue.createApp({
-	data: function(){
+	data() {
 		return {
-			courseGoalA: 'Finish the course and learn Vue!',
-			courseGoalB: 'Master Vue and build amazing apps!',
-			vueLink: 'https://vuejs.org/',
+			myName: 'Flávio Mota',
+			myAge: 33,
+			imageURL: 'https://avatarfiles.alphacoders.com/128/thumb-128984.png',
 		};
 	},
 	methods: {
-		outputGoal() {
-			const randomNumber = Math.random();
+		myAgePlusFive() {
+			return this.myAge + 5;
+		},
 
-			if (randomNumber < 0.5) {
-				return this.courseGoalA;
-			} else {
-				return this.courseGoalB;
-			}
+		getRandomNumber() {
+			return Math.random();
 		},
 	},
 });
 
-// connecting to the section by referring the ID
-app.mount('#user-goal');
+app.mount('#chart');
